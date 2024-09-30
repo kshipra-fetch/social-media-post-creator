@@ -41,7 +41,7 @@ To set up this project locally, follow these steps:
 3. **Install Dependencies**:
     Install the required Python packages by running:
     ```bash
-    pip install uagents openai bs4 flask
+    pip install uagents openai bs4 flask requests
     pip install 'flask[async]'
     ```
 
