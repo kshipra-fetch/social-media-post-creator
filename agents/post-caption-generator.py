@@ -24,21 +24,16 @@ agent = Agent(
 )
 
 fund_agent_if_low(agent.wallet.address())
-# post_proto = Protocol(name="Post-Generator-Protocol", version="0.1.0")
 
 
 async def generate_social_media_post(website_content,tone="casual"):
     try:
-        # post_prompt = f"Based on the following content: '{website_content}', write a {tone} social media post."
         post_prompt = (
             f"Based on the following content: '{website_content}', write a {tone} social media post.\n\n"
             "Ensure that the post is well-formatted, using proper alignment with appropriate new lines and spacing between sentences or sections where necessary.\n"
             "Use tabs or spaces for indentation where relevant and make sure the post flows nicely. Also, ensure any important points or sections are clearly separated."
         )
-        # if cta:
-        #     post_prompt += f" Include a call-to-action: {cta}."
-        # if hashtags:
-        #     post_prompt += f" Use the following hashtags: {hashtags}."
+
 
 
         # Call OpenAI to generate the post
@@ -75,8 +70,6 @@ async def handle_request(ctx: Context, sender: str, msg: PostGeneratorRequest):
         ctx.logger.error(err)
         await ctx.send(sender, ErrorMessage(error=str(err)))
 
-
-# agent.include(post_proto, publish_manifest=True)
 
 
 if __name__ == "__main__":
