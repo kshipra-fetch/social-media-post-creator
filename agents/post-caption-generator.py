@@ -6,7 +6,7 @@ from uagents.setup import fund_agent_if_low
 
 
 AGENT_SEED = os.getenv("AGENT_SEED", "post-generator-agent1")
-openai.api_key = "YOUR-OPENAI-KEY"
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 class PostGeneratorRequest(Model):

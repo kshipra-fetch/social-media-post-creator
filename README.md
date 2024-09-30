@@ -1,12 +1,11 @@
 # PostPerfect - Social Media Post Generator
 
-PostPerfect is a web-based application that takes a website URL as input and generates a well-crafted social media post based on the content of that URL. Additionally, the app generates an image related to the post, making it easy to create visually appealing and engaging social media content.
+PostPerfect is a web-based application that takes a website URL as input and generates a well-crafted social media post based on the content of that URL.The app makes it easy to create visually appealing and engaging social media content.
 
 ## Features
 
 - **Website Scraping**: Extracts the main content from a given website URL.
 - **Social Media Caption Generation**: Uses an AI-based model to generate a well-formatted and engaging social media caption.
-- **Image Generation**: Automatically generates an image based on the website content and the generated caption.
 
 ## Technologies Used
 
@@ -30,7 +29,7 @@ To set up this project locally, follow these steps:
 1. **Clone the Repository**:
     ```bash
     git clone https://github.com/your-username/postperfect.git
-    cd postperfect
+    cd social-media-post-creator
     ```
 
 2. **Create a Virtual Environment** (optional but recommended):
@@ -42,7 +41,8 @@ To set up this project locally, follow these steps:
 3. **Install Dependencies**:
     Install the required Python packages by running:
     ```bash
-    pip install uagents openai requests bs4
+    pip install uagents openai bs4 flask
+    pip install 'flask[async]'
     ```
 
 4. **Set Up Environment Variables**:
@@ -52,13 +52,15 @@ To set up this project locally, follow these steps:
     ```
 5. Update the SEED phrase in all three agent files
 
-5. **Run the Agents**:
+6. **Run the Agents**:
     Keep all the three agents running in separate terminals
     ```
     website-scraping-agent.py
     post-caption-generator.py
-    image-generator.py
     ```
+
+7. **Update Agent Address**
+    Copy the agent address after you run the agents from the terminal and paste it in `app.py`
 
 6. **Run the Application**:
     You can now run the Flask app:
@@ -76,7 +78,7 @@ To set up this project locally, follow these steps:
 
 1. Enter a website URL into the provided input field on the homepage.
 2. Click on the "Generate Caption" button.
-3. The app will display a caption along with a related image in the center of the screen.
+3. The app will display a caption in the center of the screen.
 
 
 
