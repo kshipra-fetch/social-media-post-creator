@@ -9,6 +9,7 @@ from uagents.setup import fund_agent_if_low
 AGENT_SEED = os.getenv("AGENT_SEED", "website-scraper-agent")
 
 
+#Data Model
 class WebsiteScraperRequest(Model):
     url: str
 
@@ -16,7 +17,7 @@ class WebsiteScraperRequest(Model):
 class WebsiteScraperResponse(Model):
     text: str
 
-
+#Agent Creation
 PORT = 8000
 agent = Agent(
     seed=AGENT_SEED,
@@ -26,9 +27,7 @@ agent = Agent(
 
 fund_agent_if_low(agent.wallet.address())
 
-# website_proto = Protocol(name="Website-Scraping-Protocol", version="0.1.0")
-
-
+#Function to extract website content
 async def get_webpage_content(url) -> str:
     try:
         response = requests.get(url, timeout=30)
@@ -79,8 +78,6 @@ async def handle_request(ctx: Context, sender: str, msg: WebsiteScraperRequest):
         ctx.logger.error(err)
         await ctx.send(sender, ErrorMessage(error=str(err)))
 
-
-# agent.include(website_proto, publish_manifest=True)
 
 
 if __name__ == "__main__":
