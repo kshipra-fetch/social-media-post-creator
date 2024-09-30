@@ -1,4 +1,4 @@
-# PostPerfect - Social Media Post Generator
+# PostPerfect - Social Media Post Creation Application
 
 PostPerfect is a web-based application that takes a website URL as input and generates a well-crafted social media post based on the content of that URL.The app makes it easy to create visually appealing and engaging social media content.
 
