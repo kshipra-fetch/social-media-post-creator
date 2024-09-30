@@ -50,7 +50,7 @@ To set up this project locally, follow these steps:
     ```
     OPENAI_API_KEY=your-openai-api-key
     ```
-5. Update the SEED phrase in all three agent files
+5. Update the SEED phrase in all the agent files
 
 6. **Run the Agents**:
     Keep all the three agents running in separate terminals
